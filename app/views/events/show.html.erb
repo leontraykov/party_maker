@@ -1,10 +1,40 @@
-<p style="color: green"><%= notice %></p>
-
-<%= render @event %>
-
 <div>
-  <%= link_to "Edit this event", edit_event_path(@event) %> |
-  <%= link_to "Back to events", events_path %>
+  <div class="event">
+    <div class="event-info row">
+      <div class="col-md-12">
+        <%= content_tag "div", "", class: "event-background",
+        style: "background-image: url(#{asset_path("event.jpg")})" %>
 
-  <%= button_to "Destroy this event", @event, method: :delete %>
+        <div class="event-info-inner row">
+          <div class="col-md-6">
+            <div class="event-description mx-2 my-2 buffer-both">
+              <h1><%= @event.title %></h1>
+              <h3><%= l @event.datetime, format: :long %></h3>
+              <h3><small><%= link_to @event.address,
+              "https://yandex.ru/maps/?text=#{@event.address}" %></small></h3>
+              <p><%= @event.description %></p>
+            </div>
+
+            <% if current_user_can_edit?(@event) %>
+              <div class="buffer-top my-3">
+                <%= link_to I18n.t("views.events.change"), edit_event_path(@event),
+                class: "btn btn-primary", title: I18n.t("views.events.change") %>
+              </div>
+              <div class="buffer-top my-3">
+
+<%# // ALARM! confirmation doesn't work // НЕ РАБОТАЕТ ПОДТВЕРЖДЕНИЕ УДАЛЕНИЯ СОБЫТИЯ // %>
+
+                <%= button_to t('views.events.delete'), event_path(@event),
+                form: { data: { turbo_confirm: t('are_you_sure') } },
+                method: :delete,
+                title: t('views.events.delete'),
+                class: 'btn btn-danger' %>
+
+              </div>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>

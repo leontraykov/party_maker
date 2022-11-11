@@ -1,16 +1,33 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>PartyMaker</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= content_for?(:title) ? yield(:title) : "PartyMaker" %></title>
     <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
-    <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
+    <%= stylesheet_link_tag "application", :media => "all" %>
+    <%= javascript_include_tag "application" %>
   </head>
 
   <body>
-    <%= yield %>
+    <div class="container-fluid">
+      <%= render "partials/navigation" %>
+    </div>
+
+    <div class="container">
+      <p style="color: green"><%= notice %></p> 
+    </div>
+
+    <div class="container">
+      <%= yield %>
+    </div>
+
+  <div class="container">
+    <footer class="text-right small fixed-bottom py-2 my-2 px-2 bg-light text-gray opacity-50">
+      <div class="mx-4 text-right"><%= t 'app.company' %> &copy; 2022</div>
+    </footer>
+  </div>
   </body>
 </html>

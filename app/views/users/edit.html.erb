@@ -1,0 +1,11 @@
+<h1><%= t 'views.users.editing' %></h1>
+
+<div class="row">
+  <div class="col-md-6 buffer-top">
+    <%= render 'form' %>
+
+    <p class="buffer-top">
+      <%= link_to I18n.t('views.users.edit_password'), edit_user_registration_path, class:"color:#FF0000;" %>
+    </p>
+  </div>
+</div>
