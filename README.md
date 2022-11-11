@@ -1,24 +1,9 @@
-# README
+BBQ - is an application which offer people the easiest way to ivite people to their events like barbeque!
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Noone wants to get late on barbeque party when all the tasty stuff will be eaten.
 
-Things you may want to cover:
+Start the event, describe a way that party will go, set a location and invite your friends to exact time.
 
-* Ruby version
+This application is bilingual - english and russian languages are available.
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+choose `en` for english language and `ru` fo russian in `config.i18n.default_locale = :ru` in config/application.rb
