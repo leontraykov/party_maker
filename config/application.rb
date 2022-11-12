@@ -20,6 +20,6 @@ module PartyMaker
     # config.eager_load_paths << Rails.root.join("extras")
 
     config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}')]
-    config.i18n.default_locale = :en
+    config.i18n.default_locale = :ru
   end
 end
