@@ -1,13 +1,20 @@
 en:
   send_instructions: "Send me reset password instructions"
   waiting_info: "Currently waiting confirmation for:"
-  cancel_acc: "Cancel my account"
+  cancel_acc: "Cancel my account forever!"
   unhappy: "Unhappy?"
   delete_acc: "Delete my account"
   update: "Update"
   characters_minimum: "characters minimum"
   are_you_sure: "Are you sure?"
   hello: "Hello world"
+  controllers:
+    events:
+      created:   "Event successfully created!"
+      updated:   "Event info updated!"
+      destroyed: "Event deleted!"
+    users:
+      updated: "Users profile updated!"
   errors: 
     one:  "There is %{count} error in your form"
     few:  "There are %{count} errors in your form"
@@ -39,7 +46,8 @@ en:
       show: "Show this user"
     events:
       editing: "Editing event"
-      start: "Start a New event!"
+      start: "Announce a New Event!"
+      announce: "Announce a New Event!"
       events: "Events"
       new_event: "New Event"
       change: "Change event"

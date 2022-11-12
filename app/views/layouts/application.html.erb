@@ -16,9 +16,15 @@
       <%= render "partials/navigation" %>
     </div>
 
-    <div class="container">
-      <p style="color: green"><%= notice %></p> 
+    <% if notice.present? %>
+      <div class="container alert alert-secondary my-2 py-2">
+        <p style="color: green"><%= notice %></p> 
+      </div>
     </div>
+    <% else %>
+      <br>
+      <br>
+    <% end %>
 
     <div class="container">
       <%= yield %>
