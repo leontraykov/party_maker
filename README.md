@@ -1,4 +1,4 @@
-BBQ - is an application which offer people the easiest way to ivite people to their events like barbeque!
+PartyMaker (Evets for friends) - is an application which offer people the easiest way to ivite people to their events like barbeque!
 
 Noone wants to get late on barbeque party when all the tasty stuff will be eaten.
 
