@@ -1,9 +1,9 @@
 <h1><%= t "views.events.events" %></h1>
 
 <div class="buffer-both my-2">
-  <%= link_to I18n.t("views.events.announce"), new_event_path, class: 'btn btn-success' %>
+  <%= link_to I18n.t("views.events.announce"), new_event_path, class: "btn btn-success" %>
 </div>
 
 <div class="row buffer-bottom">
-  <%= render partial: 'events/event', collection: @events %>
+  <%= render partial: "events/event", collection: @events %>
 </div>

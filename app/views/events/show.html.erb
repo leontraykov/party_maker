@@ -22,11 +22,11 @@
               </div>
               <div class="buffer-top my-3">
 
-                <%= button_to t('views.events.delete'), event_path(@event),
-                form: { data: { turbo_confirm: t('are_you_sure') } },
+                <%= button_to t("views.events.delete"), event_path(@event),
+                form: { data: { turbo_confirm: t("are_you_sure") } },
                 method: :delete,
-                title: t('views.events.delete'),
-                class: 'btn btn-danger' %>
+                title: t("views.events.delete"),
+                class: "btn btn-danger" %>
 
               </div>
             <% end %>

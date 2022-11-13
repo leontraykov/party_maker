@@ -5,35 +5,35 @@
 
   <div class="font-weight-bold border-top col-sm-12">
     <div class="form-group row field">
-      <p><%= f.label :email, class:"my-3 col-sm-2" %></p>
+      <p><%= f.label :email, class:"my-3 col-md-6 col-sm-12" %></p>
       <p> 
-        <%= f.email_field :email, class:"mx-2 col-sm-6 col-form-label", 
+        <%= f.email_field :email, class:"mx-2 col-md-6 col-sm-12 col-form-label", 
         autofocus: true, autocomplete: "email" %>
       </p>
     </div>
 
     <div class="form-group row field">
-      <p class="col-sm-4"><%= f.label :password %>
+      <p class="col-md-6 col-sm-12"><%= f.label :password %>
         <% if @minimum_password_length %>
           <small>(<%= @minimum_password_length %> <%= t "characters_minimum" %>)</small>
         <% end %>
       </p>
 
       <p>
-        <%= f.password_field :password, class:" mx-2 col-sm-6 col-form-label", autocomplete: "new-password" %>
+        <%= f.password_field :password, class:" mx-2 col-md-6 col-sm-12 col-form-label", autocomplete: "new-password" %>
       </p>
     </div>
 
     <div class="form-group row field">
-      <p><%= f.label :password_confirmation, class:"col-sm-4" %></p>
+      <p><%= f.label :password_confirmation, class:"col-md-6 col-sm-12" %></p>
       <p>
-        <%= f.password_field :password_confirmation, class:"mx-2 col-sm-6 col-form-label", 
+        <%= f.password_field :password_confirmation, class:"mx-2 col-md-6 col-sm-12 col-form-label", 
         autocomplete: "new-password" %>
       </p>
     </div>
 
-    <div class="actions btn-lg buffer-both">
-      <%= f.submit t("views.navi.sign_up") %>
+    <div class="actions buffer-both">
+      <%= f.submit t("views.navi.sign_up"), class:"btn btn-lg btn-primary mx-2" %>
     </div>
   </div>
 <% end %>
