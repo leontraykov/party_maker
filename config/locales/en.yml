@@ -1,4 +1,5 @@
 en:
+  send: "Instruction"
   send_instructions: "Send me reset password instructions"
   waiting_info: "Currently waiting confirmation for:"
   cancel_acc: "Cancel my account forever!"
@@ -8,6 +9,7 @@ en:
   characters_minimum: "characters minimum"
   are_you_sure: "Are you sure?"
   hello: "Hello world"
+  error: "Something went wrong"
   controllers:
     events:
       created:   "Event successfully created!"
@@ -15,6 +17,14 @@ en:
       destroyed: "Event deleted!"
     users:
       updated: "Users profile updated!"
+    comments:
+      error: "Something went wrong"
+      created: "Comment was successfully created"
+      destroyed: "Comment was successfully destroyed"
+    subscriptions:
+      created: "Subsribed!"
+      destroyed: "User deleted from Event"
+      error: "Something went wrong"
   errors: 
     one:  "There is %{count} error in your form"
     few:  "There are %{count} errors in your form"
