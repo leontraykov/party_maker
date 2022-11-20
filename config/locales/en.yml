@@ -1,4 +1,6 @@
 en:
+  event_host: "Event Host:"
+  event_guests: "Going to Event:"
   send: "Instruction"
   send_instructions: "Send me reset password instructions"
   waiting_info: "Currently waiting confirmation for:"
@@ -18,10 +20,15 @@ en:
     users:
       updated: "Users profile updated!"
     comments:
+      to_comment: "Comment this:"
+      post_comment: "Post this comment"
+      delete_comment: "Delete this comment?"
       error: "Something went wrong"
       created: "Comment was successfully created"
       destroyed: "Comment was successfully destroyed"
     subscriptions:
+      subscribe: "Subscribe!"
+      unsubscribe: "Unsubscribe!"
       created: "Subsribed!"
       destroyed: "User deleted from Event"
       error: "Something went wrong"

@@ -2,7 +2,7 @@
   <%= render partial: "partials/form_errors", locals: {model: comment} %>
 
   <div class="form-group">
-    <%= f.label :body %>
+    <%= f.label :body, I18n.t("controllers.comments.to_comment") %>
     <%= f.text_area :body, class:"form-control" %>
   </div>
 
@@ -14,6 +14,6 @@
   <% end %>
 
   <div class="actions">
-    <%= f.submit "ОтправитьЁба", class:"btn btn-success buffer-both" %>
+    <%= f.submit I18n.t("controllers.comments.post_comment"), class:"btn btn-success buffer-both" %>
   </div>
 <% end %>

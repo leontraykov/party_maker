@@ -1,14 +1,16 @@
-<span class="subscription">
-  <% if subscription.user.present? %>
-    <%= render partial: "users/user", object: subscription.user %>
-  <% else %>
-    <em><%= subscription.user_name %></em>
-  <% end %>
-
+<div class="subscription d-flex align-items-center py-1">
+  <div class="mx">
+    <% if subscription.user.present? %>
+      <%= render partial: "users/user", object: subscription.user %>
+    <% else %>
+      <em><%= subscription.user_name %></em>
+    <% end %>
+  </div>
   <% if current_user_can_edit?(subscription) %>
     <%= button_to "❌", event_subscription_path(subscription.event, subscription), method: :delete,
       form: { data: { turbo_confirm: t("are_you_sure") } },
-      class: "btn btn-sm btn-outline-danger buffer-bottom" 
+      class: "btn btn-sm btn-outline mx-1",
+      title: I18n.t("controllers.subscriptions.unsubscribe")
     %>
   <% end %>
-</span>
+</div>
