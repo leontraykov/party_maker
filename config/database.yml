@@ -14,7 +14,7 @@ test:
 
 production:
   <<: *default
-  url: <%= ENV["DATABASE_URL"] %> #это добавлено для деплоя на railway.app
+  # url: <%= ENV["DATABASE_URL"] %> # это добавлено для деплоя на railway.app
   database: party_maker_production
   username: party_maker
   password: <%= ENV["PARTY_MAKER_DATABASE_PASSWORD"] %>
