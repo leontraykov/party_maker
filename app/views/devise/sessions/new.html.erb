@@ -1,6 +1,7 @@
 <h2><%= t("views.navi.sign_in") %></h2>
 
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+      <%= render partial: "devise/shared/error_messages", resource: resource %>
   <div class="border-top font-weight-bold col-sm-12">
 
     <div class="form-group row field">
