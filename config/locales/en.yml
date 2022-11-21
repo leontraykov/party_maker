@@ -1,6 +1,7 @@
 en:
+  im_in: "I'm in"
   event_host: "Event Host:"
-  event_guests: "Going to Event:"
+  event_guests: "Event participants:"
   send: "Instruction"
   send_instructions: "Send me reset password instructions"
   waiting_info: "Currently waiting confirmation for:"

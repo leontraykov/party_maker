@@ -47,7 +47,7 @@
     </div>
 
     <div class="buffer-both py-4 px-4 col-md-4">
-      <div class="event-owner">
+      <div class="">
         <h4><%= t("event_host") %></h4>
         <p><%= render partial: "users/user", object: @event.user %></p>
       </div>
@@ -59,9 +59,9 @@
           </p>
         </div>
       </div>
-      <% unless @event.user == current_user %>
+      <% unless @event.user == current_user #|| юзер состоит в массиве подписок %>
         <div class="event-subscriptions-form">
-          <h4>Я пойду!</h4>
+          <h4><%= t("im_in") %></h4>
           <div>
             <%= render partial: "subscriptions/form", locals: {subscription: @new_subscription || @event.subscriptions.build } %>
           </div>
