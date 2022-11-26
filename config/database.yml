@@ -1,0 +1,26 @@
+default: &default
+        adapter: postgresql
+        encoding: unicode
+        pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+        timeout: 5000
+
+      development:
+        <<: *default
+        host: localhost
+        port: 5432
+        user: postgres
+        database: rubydeploy_dev
+
+      test:
+        <<: *default
+        host: localhost
+        port: 5432
+        database: rubydeploy_test
+
+      production:
+        <<: *default
+        host: localhost
+        port: 5432
+        database: party_maker_production
+        username: deploy
+        password: <%= ENV["PARTY_MAKER_DATABASE_PASSWORD"] %>
