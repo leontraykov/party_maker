@@ -1,4 +1,12 @@
 ru:
+  activerecord:
+    errors:
+        models:
+          subscription:
+            attributes:
+              user_email:
+                wrong_email: "Эта почта уже занята"
+                own_event: "Нельзя подписаться на своё мероприятие"
   im_in: "Я участвую"
   event_host: "Организатор мероприятия:"
   event_guests: "Посетители:"

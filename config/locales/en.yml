@@ -1,4 +1,12 @@
 en:
+  activerecord:
+    errors:
+        models:
+          subscription:
+            attributes:
+              user_email:
+                wrong_email: "It's already used by someone"
+                own_event: "You can't subscribe to your own event"
   im_in: "I'm in"
   event_host: "Event Host:"
   event_guests: "Event participants:"

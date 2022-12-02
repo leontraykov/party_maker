@@ -59,7 +59,7 @@
           </p>
         </div>
       </div>
-      <% unless @event.user == current_user #|| юзер состоит в массиве подписок %>
+      <% unless event_owner?(@event) #|| юзер состоит в массиве подписок %>
         <div class="event-subscriptions-form">
           <h4><%= t("im_in") %></h4>
           <div>
